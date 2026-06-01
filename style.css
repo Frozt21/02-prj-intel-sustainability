@@ -1,1 +1,193 @@
-/* Add your CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #03111f, #071b2d, #0f172a);
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), url("img/intel-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  color: #00c7fd;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* TIMELINE */
+
+.timeline {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4rem 2rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.timeline-card {
+  min-width: 350px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), rgba(255, 255, 255, 0.05);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1rem;
+  scroll-snap-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 340px;
+  color: white;
+}
+
+.timeline-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 199, 253, 0.4);
+}
+
+..timeline-card h2 {
+  text-align: center;
+  color: #00c7fd;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.timeline-card h2,
+.card-info h3,
+.card-info p {
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+/* HIDDEN DETAILS */
+
+.card-info {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0 1rem;
+  border-radius: 15px;
+}
+
+.timeline-card:hover .card-info {
+  opacity: 1;
+  max-height: 400px;
+  padding: 1rem;
+}
+
+.card-info h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-info p {
+  line-height: 1.7;
+}
+
+/* REFLECTION */
+
+.reflection {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.reflection h2 {
+  text-align: center;
+  color: #00c7fd;
+  margin-bottom: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.reflection-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.reflection-box h3 {
+  color: #67e8f9;
+  margin-bottom: 0.75rem;
+}
+
+.reflection-box p {
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #94a3b8;
+}
+
+/* MOBILE VERSION */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .timeline {
+    display: block;
+    overflow: visible;
+  }
+
+  .timeline-card {
+    min-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .card-info {
+    opacity: 1;
+    max-height: 500px;
+    padding: 1rem;
+  }
+}
+
