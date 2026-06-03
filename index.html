@@ -2,12 +2,19 @@
 
 <html lang="en">
 <head>
+    <link href="https://jsdelivr.net" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intel Sustainability Timeline</title>
 
+    <!-- Bootstrap CSS for responsive grid and RTL support -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
 ```
 <link rel="stylesheet" href="style.css">
+<script src="https://jsdelivr.net"></script>
 ```
 
 </head>
@@ -165,12 +172,270 @@
 
 </section>
 
+<!-- New three-column responsive layout section -->
+<section class="sustainability-pillars">
+    <div class="container">
+        <h2 class="text-center mb-5">Intel's Sustainability Pillars</h2>
+        
+        <!-- Bootstrap grid: responsive columns that stack on small screens -->
+        <div class="row g-4">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                                                <div class="icon-wrapper">
+                                                    <i class="bi bi-lightning-charge-fill"></i>
+                                                </div>
+                        <h5 class="card-title">Energy Efficiency</h5>
+                        <p class="card-text">
+                            Intel invests in next-generation chip designs that use less power while delivering more performance.
+                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+                                    <div class="icon-wrapper">
+                                        <i class="bi bi-sun-fill"></i>
+                                    </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Renewable Energy</h5>
+                        <p class="card-text">
+                            By 2030, Intel aims to use 100% renewable electricity at all US manufacturing sites.
+                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 3 -->
+                                    <div class="icon-wrapper">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Circular Economy</h5>
+                        <p class="card-text">
+                            Intel works to reduce waste and improve recycling practices throughout its supply chain.
+                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
+                        <!-- FAQ Accordion Section (Interactive Bootstrap Component) -->
+                        <section id="faqs" class="faq-section">
+                            <div class="container">
+                                <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        
+                                <div class="accordion accordion-flush" id="faqAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                                What is Intel's commitment to energy efficiency?
+                                            </button>
+                                        </h2>
+                                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                Intel is committed to designing processors that deliver maximum performance while minimizing power consumption. This includes investing in advanced manufacturing technologies and chip architecture improvements.
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                                How does Intel promote renewable energy?
+                                            </button>
+                                        </h2>
+                                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                Intel is investing in solar, wind, and other renewable energy sources to power its manufacturing facilities. The company has set a goal to achieve 100% renewable electricity at all US sites by 2030.
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                                What is the circular economy approach?
+                                            </button>
+                                        </h2>
+                                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                The circular economy focuses on reducing waste, reusing materials, and recycling products at the end of their life. Intel is working to implement these principles throughout its supply chain to minimize environmental impact.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Subscription Form Section -->
+                        <section class="subscription-section">
+                            <div class="container">
+                                <div class="subscription-form-wrapper">
+                                    <h2>Stay Updated on Sustainability News</h2>
+                                    <p>Subscribe to Intel's sustainability newsletter for the latest updates on our environmental initiatives.</p>
+            
+                                    <form class="subscription-form" id="subscriptionForm">
+                                        <div class="form-group">
+                                            <label for="emailInput" class="form-label">Email Address</label>
+                                            <div class="input-group">
+                                                <input type="email" class="form-control" id="emailInput" placeholder="your.email@example.com" required aria-label="Email address for subscription">
+                                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                                            </div>
+                                            <small class="form-text">We respect your privacy. Your email will never be shared.</small>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="reflection" id="reflection">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="reflection">
 
     <h2>Reflection</h2>
 
-    <div class="reflection-box">
-        <h3>Creating a Webpage</h3>
+    <div class="container">
+        <h2 class="text-center mb-5">Reflections on Learning</h2>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="reflection-box">
+                    <h3><i class="bi bi-question-circle"></i> Interview Question</h3>
+                    <p class="question"><strong>"How would you explain responsive web design to a non-technical person?"</strong></p>
+                    <p>
+                        I would compare responsive web design to a smart piece of furniture that adjusts to fit any room. Just like a table that can expand or shrink depending on your space, a responsive website automatically adapts its layout to fit different screen sizes—phones, tablets, and desktops. This ensures users have a great experience no matter what device they're using. Bootstrap helps developers create these flexible layouts efficiently by using a grid system that reorganizes content based on screen size.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="reflection-box">
+                    <h3><i class="bi bi-robot"></i> Probabilistic AI</h3>
+                    <p class="question"><strong>"How might AI help improve web accessibility?"</strong></p>
+                    <p>
+                        Probabilistic AI can analyze web content and automatically suggest accessibility improvements, like detecting missing alt text, identifying color contrast issues, or recommending semantic HTML elements. Machine learning models can predict which changes would have the highest impact on user experience for people with disabilities. AI can also generate alternative descriptions for images and test RTL layouts across multiple languages, helping developers create more inclusive websites faster.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection-box mt-4">
+            <h3><i class="bi bi-linkedin"></i> LinkedIn Post</h3>
+            <p class="question"><strong>Share your learning journey on sustainability and web development:</strong></p>
+            <blockquote class="linkedin-post">
+                "Just built an accessible, RTL-compatible Intel Sustainability Timeline! 🌍 This project taught me that responsive web design isn't just about looks—it's about creating inclusive experiences for everyone, regardless of device or language. Using Bootstrap's grid system and accessibility best practices, I learned how modern web development bridges technology and social responsibility. Excited to apply these skills to create more accessible digital experiences. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- Improved Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h5>About Intel</h5>
+                <p>Intel is a leading technology company committed to innovation and sustainability.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#reflection">Reflections</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center py-3">
+            <p>&copy; 2024 Intel Corporation. Committed to sustainability through technology and innovation.</p>
+            <p class="footer-hint">Scroll horizontally to explore Intel's history, then think about your next big idea.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Language Detection & RTL Toggle Script -->
+<script>
+    // Auto-detect language and apply RTL layout
+    function detectLanguageAndApplyRTL() {
+        const htmlLang = document.documentElement.lang;
+        const browserLang = navigator.language || navigator.userLanguage;
+        
+        // RTL languages: Arabic, Hebrew, Persian, Urdu, etc.
+        const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi'];
+        
+        // Check if current or browser language is RTL
+        const isRTL = rtlLanguages.some(lang => 
+            htmlLang.includes(lang) || browserLang.includes(lang)
+        );
+        
+        if (isRTL) {
+            document.documentElement.dir = 'rtl';
+            document.body.classList.add('rtl-mode');
+            localStorage.setItem('textDirection', 'rtl');
+        } else {
+            document.documentElement.dir = 'ltr';
+            localStorage.setItem('textDirection', 'ltr');
+        }
+    }
+    
+    // Add language toggle function
+    function toggleLanguage(lang) {
+        document.documentElement.lang = lang;
+        const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi'];
+        
+        if (rtlLanguages.includes(lang)) {
+            document.documentElement.dir = 'rtl';
+            document.body.classList.add('rtl-mode');
+            localStorage.setItem('textDirection', 'rtl');
+            localStorage.setItem('selectedLanguage', lang);
+        } else {
+            document.documentElement.dir = 'ltr';
+            document.body.classList.remove('rtl-mode');
+            localStorage.setItem('textDirection', 'ltr');
+            localStorage.setItem('selectedLanguage', lang);
+        }
+    }
+    
+    // Apply settings on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('selectedLanguage');
+        if (savedLang) {
+            toggleLanguage(savedLang);
+        } else {
+            detectLanguageAndApplyRTL();
+        }
+        
+        // Form submission handler
+        const subscriptionForm = document.getElementById('subscriptionForm');
+        if (subscriptionForm) {
+            subscriptionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('emailInput').value;
+                alert('Thank you for subscribing with: ' + email);
+                this.reset();
+            });
+        }
+    });
+</script>
+
+<!-- Bootstrap JS for interactive components -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
         <p>
             Creating this webpage helped me understand how HTML and
