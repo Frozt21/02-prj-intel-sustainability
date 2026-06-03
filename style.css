@@ -54,6 +54,19 @@ body {
   margin: 0 auto 1.5rem;
 }
 
+.language-menu {
+  max-width: 280px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+
+.language-menu label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -144,6 +157,27 @@ body {
   margin: auto;
   line-height: 1.7;
   color: #cbd5e1;
+}
+
+.sustainability-carousel {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sustainability-carousel .carousel-item img {
+  min-height: 350px;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.sustainability-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.54);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  transform: translateY(-10px);
+}
+
+.sustainability-carousel h2 {
+  color: #67e8f9;
 }
 
 @keyframes fadeInUp {
@@ -325,5 +359,395 @@ footer {
     max-height: 500px;
     padding: 1rem;
   }
+}
+
+/* SUSTAINABILITY PILLARS - Three Column Section */
+
+.sustainability-pillars {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #0f172a, #ffffff);
+}
+
+.sustainability-pillars h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #00c7fd;
+  margin-bottom: 3rem;
+}
+
+.sustainability-pillars .card {
+  background: rgba(0, 199, 253, 0.05);
+  border: 1px solid rgba(0, 199, 253, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sustainability-pillars .card:hover {
+  background: rgba(0, 199, 253, 0.1);
+  border-color: rgba(0, 199, 253, 0.4);
+  transform: translateY(-5px);
+}
+
+.sustainability-pillars .card-title {
+
+  /* ICON STYLING IN PILLARS */
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 199, 253, 0.15);
+    border: 2px solid rgba(0, 199, 253, 0.4);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .sustainability-pillars .card:hover .icon-wrapper {
+    background: rgba(0, 199, 253, 0.25);
+    border-color: rgba(0, 199, 253, 0.6);
+    transform: scale(1.1);
+  }
+
+  .icon-wrapper i {
+    font-size: 1.8rem;
+    color: #00c7fd;
+  }
+
+  /* FAQ SECTION */
+  .faq-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #1a1f3a, #132541);
+  }
+
+  .faq-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #00c7fd;
+    margin-bottom: 3rem;
+  }
+
+  .accordion {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .accordion-item {
+    background: rgba(0, 199, 253, 0.05);
+    border: 1px solid rgba(0, 199, 253, 0.2);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .accordion-button {
+    background: transparent;
+    color: #e0f2fe;
+    font-weight: 500;
+    padding: 1.2rem;
+    border: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background: rgba(0, 199, 253, 0.1);
+    color: #00c7fd;
+    box-shadow: none;
+  }
+
+  .accordion-button:focus {
+    border-color: rgba(0, 199, 253, 0.4);
+    box-shadow: 0 0 0 0.25rem rgba(0, 199, 253, 0.25);
+  }
+
+  .accordion-body {
+    background: rgba(0, 0, 0, 0.2);
+    color: #cbd5e1;
+    border-top: 1px solid rgba(0, 199, 253, 0.15);
+    padding: 1rem 1.2rem;
+    line-height: 1.8;
+  }
+
+  /* SUBSCRIPTION FORM SECTION */
+  .subscription-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 199, 253, 0.08), rgba(0, 0, 0, 0.3));
+    border-top: 1px solid rgba(0, 199, 253, 0.2);
+    border-bottom: 1px solid rgba(0, 199, 253, 0.2);
+  }
+
+  .subscription-form-wrapper {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .subscription-form-wrapper h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00c7fd;
+    margin-bottom: 0.75rem;
+  }
+
+  .subscription-form-wrapper > p {
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .subscription-form {
+    margin-top: 2rem;
+  }
+
+  .subscription-form .form-label {
+    color: #a5f3fc;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .subscription-form .form-control {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 199, 253, 0.3);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .subscription-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00c7fd;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(0, 199, 253, 0.25);
+  }
+
+  .subscription-form .form-control::placeholder {
+    color: #94a3b8;
+  }
+
+  .subscription-form .input-group .btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .subscription-form .form-text {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  /* REFLECTION SECTION IMPROVEMENTS */
+  .reflection {
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #0f172a, #1a1f3a);
+  }
+
+  .reflection > h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #00c7fd;
+  }
+
+  .reflection-box {
+    background: rgba(0, 199, 253, 0.05);
+    border: 1px solid rgba(0, 199, 253, 0.2);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .reflection-box:hover {
+    background: rgba(0, 199, 253, 0.08);
+    border-color: rgba(0, 199, 253, 0.35);
+    transform: translateY(-3px);
+  }
+
+  .reflection-box h3 {
+    color: #00c7fd;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .reflection-box h3 i {
+    font-size: 1.5rem;
+  }
+
+  .reflection-box .question {
+    color: #a5f3fc;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  .reflection-box p {
+    color: #e0f2fe;
+    line-height: 1.8;
+  }
+
+  .linkedin-post {
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #00c7fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-style: italic;
+    color: #cbd5e1;
+    margin-top: 1rem;
+  }
+
+  /* FOOTER IMPROVEMENTS */
+  .footer {
+    background: linear-gradient(to bottom, #0a0f1f, #020a15);
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid rgba(0, 199, 253, 0.2);
+  }
+
+  .footer h5 {
+    color: #00c7fd;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  .footer p {
+    color: #94a3b8;
+    line-height: 1.6;
+  }
+
+  .footer a {
+    color: #a5f3fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: #00c7fd;
+  }
+
+  .footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .social-links a {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-3px);
+    color: #00c7fd;
+  }
+
+  .footer hr {
+    border-color: rgba(0, 199, 253, 0.1);
+  }
+
+  .footer-hint {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+
+  /* ACCESSIBILITY: RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  [dir="rtl"] .reflection-box h3,
+  [dir="rtl"] .reflection-box .question {
+    text-align: right;
+  }
+
+  [dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+  }
+
+  /* MOBILE RESPONSIVENESS */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .sustainability-pillars h2,
+    .faq-section h2,
+    .reflection > h2 {
+      font-size: 1.8rem;
+    }
+
+    .subscription-form-wrapper h2 {
+      font-size: 1.5rem;
+    }
+
+    .sustainability-pillars,
+    .faq-section,
+    .subscription-section,
+    .reflection {
+      padding: 2.5rem 1rem;
+    }
+
+    .reflection-box {
+      margin-bottom: 1rem;
+    }
+
+    .subscription-form-wrapper {
+      margin: auto 0;
+    }
+
+    .footer h5 {
+      margin-top: 1.5rem;
+    }
+
+    .footer > .container > .row {
+      text-align: center;
+    }
+
+    .social-links {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* ACCESSIBILITY: Focus Indicators */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    outline: 2px solid #00c7fd;
+    outline-offset: 2px;
+  }
+
+  /* ACCESSIBILITY: High Contrast Mode Support */
+  @media (prefers-contrast: more) {
+    .btn-primary {
+      color: #000;
+    }
+
+    .sustainability-pillars .card {
+      border-width: 2px;
+    }
+
+    .accordion-item {
+      border-width: 2px;
+    }
+  }
+
+  /* ACCESSIBILITY: Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  color: #00c7fd;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 

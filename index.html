@@ -2,7 +2,6 @@
 
 <html lang="en">
 <head>
-    <link href="https://jsdelivr.net" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intel Sustainability Timeline</title>
@@ -14,7 +13,6 @@
 
 ```
 <link rel="stylesheet" href="style.css">
-<script src="https://jsdelivr.net"></script>
 ```
 
 </head>
@@ -25,49 +23,59 @@
     <div class="hero-content">
         <img src="img/intel-header-logo.svg" alt="Intel Logo" class="logo">
 
-        <h1>Intel: Sustainability Through the Ages</h1>
+        <div class="language-menu">
+            <label for="languageSelect" data-i18n="hero.languageLabel">Page Language</label>
+            <select id="languageSelect" class="form-select form-select-sm" onchange="toggleLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
 
-        <p>
+        <h1 data-i18n="hero.title">Intel: Sustainability Through the Ages</h1>
+
+        <p data-i18n="hero.description">
             Explore Intel's journey from its founding in 1968 to its
             sustainability innovations shaping the future today.
         </p>
 
         <div class="hero-actions">
-            <a href="#timeline" class="btn btn-primary">Explore the timeline</a>
-            <a href="#reflection" class="btn btn-secondary">See why it matters</a>
+            <a href="#timeline" class="btn btn-primary" data-i18n="hero.ctaTimeline">Explore the timeline</a>
+            <a href="#reflection" class="btn btn-secondary" data-i18n="hero.ctaReflection">See why it matters</a>
         </div>
 
-        <p class="hero-hint">Tip: hover over each card to reveal the story.</p>
+        <p class="hero-hint" data-i18n="hero.hint">Tip: hover over each card to reveal the story.</p>
     </div>
 </header>
 
 <section class="highlights">
     <div class="feature-card">
-        <h3>Innovation</h3>
-        <p>Intel helped launch the era of modern computing, from microprocessors to new chip designs.</p>
+        <h3 data-i18n="feature1.title">Innovation</h3>
+        <p data-i18n="feature1.text">Intel helped launch the era of modern computing, from microprocessors to new chip designs.</p>
     </div>
     <div class="feature-card">
-        <h3>Impact</h3>
-        <p>See how key milestones shaped Intel's move toward renewable energy and responsible growth.</p>
+        <h3 data-i18n="feature2.title">Impact</h3>
+        <p data-i18n="feature2.text">See how key milestones shaped Intel's move toward renewable energy and responsible growth.</p>
     </div>
     <div class="feature-card">
-        <h3>Inspiration</h3>
-        <p>Discover how technology and sustainability can work together to build a stronger future.</p>
+        <h3 data-i18n="feature3.title">Inspiration</h3>
+        <p data-i18n="feature3.text">Discover how technology and sustainability can work together to build a stronger future.</p>
     </div>
 </section>
 
 <section id="timeline" class="timeline">
     <div class="timeline-intro">
-        <h2>Swipe through the milestones</h2>
-        <p>Each card highlights a moment that helped Intel grow and become more sustainable.</p>
+        <h2 data-i18n="timeline.introTitle">Swipe through the milestones</h2>
+        <p data-i18n="timeline.introText">Each card highlights a moment that helped Intel grow and become more sustainable.</p>
     </div>
 
     <div class="timeline-card" style="background-image: url('img/1.jpg');">
         <h2>1968</h2>
 
         <div class="card-info">
-            <h3>Intel Founded</h3>
-            <p>
+            <h3 data-i18n="timeline.card1.title">Intel Founded</h3>
+            <p data-i18n="timeline.card1.text">
                 Robert Noyce and Gordon Moore establish Intel,
                 beginning a new era of semiconductor innovation.
             </p>
@@ -78,8 +86,8 @@
         <h2>1971</h2>
 
         <div class="card-info">
-            <h3>First Microprocessor</h3>
-            <p>
+            <h3 data-i18n="timeline.card2.title">First Microprocessor</h3>
+            <p data-i18n="timeline.card2.text">
                 Intel releases the 4004, the world's first commercial
                 microprocessor.
             </p>
@@ -90,8 +98,8 @@
         <h2>1978</h2>
 
         <div class="card-info">
-            <h3>8086 Processor</h3>
-            <p>
+            <h3 data-i18n="timeline.card3.title">8086 Processor</h3>
+            <p data-i18n="timeline.card3.text">
                 Intel launches the 8086 processor, establishing
                 the x86 architecture.
             </p>
@@ -102,8 +110,8 @@
         <h2>1985</h2>
 
         <div class="card-info">
-            <h3>386 Processor</h3>
-            <p>
+            <h3 data-i18n="timeline.card4.title">386 Processor</h3>
+            <p data-i18n="timeline.card4.text">
                 Intel introduces 32-bit computing with the
                 revolutionary 386 processor.
             </p>
@@ -114,8 +122,8 @@
         <h2>2006</h2>
 
         <div class="card-info">
-            <h3>Peak GHG Emissions</h3>
-            <p>
+            <h3 data-i18n="timeline.card5.title">Peak GHG Emissions</h3>
+            <p data-i18n="timeline.card5.text">
                 Intel begins major investments in renewable energy
                 and sustainable manufacturing.
             </p>
@@ -126,8 +134,8 @@
         <h2>2020</h2>
 
         <div class="card-info">
-            <h3>RISE Strategy</h3>
-            <p>
+            <h3 data-i18n="timeline.card6.title">RISE Strategy</h3>
+            <p data-i18n="timeline.card6.text">
                 Intel launches its Responsible, Inclusive,
                 Sustainable, and Enabling growth strategy.
             </p>
@@ -138,8 +146,8 @@
         <h2>2022</h2>
 
         <div class="card-info">
-            <h3>Net-Zero Goal</h3>
-            <p>
+            <h3 data-i18n="timeline.card7.title">Net-Zero Goal</h3>
+            <p data-i18n="timeline.card7.text">
                 Intel commits to achieving net-zero greenhouse gas
                 emissions by 2040.
             </p>
@@ -150,8 +158,8 @@
         <h2>2023</h2>
 
         <div class="card-info">
-            <h3>99% Renewable Electricity</h3>
-            <p>
+            <h3 data-i18n="timeline.card8.title">99% Renewable Electricity</h3>
+            <p data-i18n="timeline.card8.text">
                 Intel reaches 99% renewable electricity use across
                 global operations.
             </p>
@@ -162,8 +170,8 @@
         <h2>2024</h2>
 
         <div class="card-info">
-            <h3>Sustainability Summit</h3>
-            <p>
+            <h3 data-i18n="timeline.card9.title">Sustainability Summit</h3>
+            <p data-i18n="timeline.card9.text">
                 Intel hosts its first Sustainability Summit focused
                 on future manufacturing solutions.
             </p>
@@ -175,7 +183,7 @@
 <!-- New three-column responsive layout section -->
 <section class="sustainability-pillars">
     <div class="container">
-        <h2 class="text-center mb-5">Intel's Sustainability Pillars</h2>
+        <h2 class="text-center mb-5" data-i18n="pillars.title">Intel's Sustainability Pillars</h2>
         
         <!-- Bootstrap grid: responsive columns that stack on small screens -->
         <div class="row g-4">
@@ -183,116 +191,46 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                                                <div class="icon-wrapper">
-                                                    <i class="bi bi-lightning-charge-fill"></i>
-                                                </div>
-                        <h5 class="card-title">Energy Efficiency</h5>
-                        <p class="card-text">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="pillars.card1.title">Energy Efficiency</h5>
+                        <p class="card-text" data-i18n="pillars.card1.text">
                             Intel invests in next-generation chip designs that use less power while delivering more performance.
-                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
                         </p>
+                        <a href="#faqs" class="btn btn-sm btn-primary" data-i18n="pillars.card1.button">Learn More</a>
                     </div>
                 </div>
             </div>
             
             <!-- Column 2 -->
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-sun-fill"></i>
-                                    </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Renewable Energy</h5>
-                        <p class="card-text">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-sun-fill"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="pillars.card2.title">Renewable Energy</h5>
+                        <p class="card-text" data-i18n="pillars.card2.text">
                             By 2030, Intel aims to use 100% renewable electricity at all US manufacturing sites.
-                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
                         </p>
+                        <a href="#faqs" class="btn btn-primary btn-sm" data-i18n="pillars.card2.button">Learn More</a>
                     </div>
                 </div>
             </div>
             
             <!-- Column 3 -->
-                                    <div class="icon-wrapper">
-                                        <i class="bi bi-arrow-repeat"></i>
-                                    </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Circular Economy</h5>
-                        <p class="card-text">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="pillars.card3.title">Circular Economy</h5>
+                        <p class="card-text" data-i18n="pillars.card3.text">
                             Intel works to reduce waste and improve recycling practices throughout its supply chain.
-                                                <a href="#faqs" class="btn btn-sm btn-primary">Learn More</a>
-                        <!-- FAQ Accordion Section (Interactive Bootstrap Component) -->
-                        <section id="faqs" class="faq-section">
-                            <div class="container">
-                                <h2 class="text-center mb-5">Frequently Asked Questions</h2>
-        
-                                <div class="accordion accordion-flush" id="faqAccordion">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                                What is Intel's commitment to energy efficiency?
-                                            </button>
-                                        </h2>
-                                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                Intel is committed to designing processors that deliver maximum performance while minimizing power consumption. This includes investing in advanced manufacturing technologies and chip architecture improvements.
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                                How does Intel promote renewable energy?
-                                            </button>
-                                        </h2>
-                                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                Intel is investing in solar, wind, and other renewable energy sources to power its manufacturing facilities. The company has set a goal to achieve 100% renewable electricity at all US sites by 2030.
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                                What is the circular economy approach?
-                                            </button>
-                                        </h2>
-                                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                The circular economy focuses on reducing waste, reusing materials, and recycling products at the end of their life. Intel is working to implement these principles throughout its supply chain to minimize environmental impact.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Subscription Form Section -->
-                        <section class="subscription-section">
-                            <div class="container">
-                                <div class="subscription-form-wrapper">
-                                    <h2>Stay Updated on Sustainability News</h2>
-                                    <p>Subscribe to Intel's sustainability newsletter for the latest updates on our environmental initiatives.</p>
-            
-                                    <form class="subscription-form" id="subscriptionForm">
-                                        <div class="form-group">
-                                            <label for="emailInput" class="form-label">Email Address</label>
-                                            <div class="input-group">
-                                                <input type="email" class="form-control" id="emailInput" placeholder="your.email@example.com" required aria-label="Email address for subscription">
-                                                <button class="btn btn-primary" type="submit">Subscribe</button>
-                                            </div>
-                                            <small class="form-text">We respect your privacy. Your email will never be shared.</small>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="reflection" id="reflection">
                         </p>
+                        <a href="#faqs" class="btn btn-sm btn-primary" data-i18n="pillars.card3.button">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -300,36 +238,270 @@
     </div>
 </section>
 
-<section class="reflection">
+<!-- Sustainability Stories Carousel -->
+<section class="sustainability-carousel py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Sustainability Stories</h2>
+        <div id="storiesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Story 1"></button>
+                <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="1" aria-label="Story 2"></button>
+                <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="2" aria-label="Story 3"></button>
+            </div>
+            <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+                <div class="carousel-item active">
+                    <img src="img/1.jpg" class="d-block w-100" alt="Intel campus in the early years">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h5>Founding Innovation</h5>
+                        <p>Intel's early work helped launch the modern era of computing with an eye toward long-term progress.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/2.jpg" class="d-block w-100" alt="A moment in Intel's history of sustainable development">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h5>Renewable Growth</h5>
+                        <p>Intel invested in cleaner energy and smarter manufacturing to make technology more sustainable.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/3.jpg" class="d-block w-100" alt="Intel sustainability journey through time">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h5>Future Focus</h5>
+                        <p>Today Intel aims for net-zero emissions, showing sustainability is part of every next step.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#storiesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#storiesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
 
-    <h2>Reflection</h2>
+<!-- FAQ Accordion Section -->
+<section id="faqs" class="faq-section">
+    <div class="container">
+        <h2 class="text-center mb-5" data-i18n="faq.title">
+            <i class="bi bi-question-circle-fill"></i>
+            Frequently Asked Questions
+        </h2>
+
+        <div class="accordion accordion-flush" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq1"
+                        aria-expanded="false"
+                        aria-controls="faq1"
+                        data-i18n="faq1.question">
+                        What is Intel's commitment to energy efficiency?
+                    </button>
+                </h3>
+
+                <div
+                    id="faq1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body" data-i18n="faq1.answer">
+                        Intel designs processors and technologies that
+                        deliver more computing power while using less
+                        energy. The company continually invests in
+                        advanced manufacturing processes and efficient
+                        chip architectures to reduce environmental impact.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq2"
+                        aria-expanded="false"
+                        aria-controls="faq2"
+                        data-i18n="faq2.question">
+                        How does Intel support renewable energy?
+                    </button>
+                </h3>
+
+                <div
+                    id="faq2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body" data-i18n="faq2.answer">
+                        Intel invests in renewable energy sources such as
+                        solar and wind power to support manufacturing
+                        operations. The company has set ambitious goals
+                        to increase renewable electricity usage and reduce
+                        greenhouse gas emissions globally.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq3"
+                        aria-expanded="false"
+                        aria-controls="faq3"
+                        data-i18n="faq3.question">
+                        What is Intel's circular economy approach?
+                    </button>
+                </h3>
+
+                <div
+                    id="faq3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body" data-i18n="faq3.answer">
+                        Intel works to reduce waste by reusing materials,
+                        increasing recycling efforts, and improving supply
+                        chain sustainability. This circular economy approach
+                        helps conserve resources and minimize environmental
+                        impact throughout product lifecycles.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq4"
+                        aria-expanded="false"
+                        aria-controls="faq4"
+                        data-i18n="faq4.question">
+                        What is Intel's net-zero goal?
+                    </button>
+                </h3>
+
+                <div
+                    id="faq4"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body" data-i18n="faq4.answer">
+                        Intel has committed to achieving net-zero
+                        greenhouse gas emissions across its global
+                        operations by 2040 through energy efficiency,
+                        renewable electricity, and innovative
+                        manufacturing solutions.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFive">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq5"
+                        aria-expanded="false"
+                        aria-controls="faq5"
+                        data-i18n="faq5.question">
+                        Why is sustainability important for technology companies?
+                    </button>
+                </h3>
+
+                <div
+                    id="faq5"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+
+                    <div class="accordion-body" data-i18n="faq5.answer">
+                        Technology companies consume significant energy
+                        and resources. Sustainable practices help reduce
+                        environmental impact while supporting innovation,
+                        long-term business growth, and responsible use of
+                        natural resources.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Subscription Form Section -->
+<section class="subscription-section">
+    <div class="container">
+        <div class="subscription-form-wrapper">
+            <h2 data-i18n="subscription.title">Stay Updated on Sustainability News</h2>
+            <p data-i18n="subscription.text">Subscribe to Intel's sustainability newsletter for the latest updates on our environmental initiatives.</p>
+
+            <form class="subscription-form" id="subscriptionForm">
+                <div class="form-group">
+                    <label for="emailInput" class="form-label" data-i18n="subscription.label">Email Address</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="emailInput" placeholder="your.email@example.com" data-i18n-placeholder="true" required aria-label="Email address for subscription">
+                        <button class="btn btn-primary" type="submit" data-i18n="subscription.button">Subscribe</button>
+                    </div>
+                    <small class="form-text" data-i18n="subscription.privacy">We respect your privacy. Your email will never be shared.</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="reflection" id="reflection">
+    <h2 data-i18n="reflection.title">Reflection</h2>
 
     <div class="container">
-        <h2 class="text-center mb-5">Reflections on Learning</h2>
+        <h2 class="text-center mb-5" data-i18n="reflection.heading">Reflections on Learning</h2>
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class="reflection-box">
-                    <h3><i class="bi bi-question-circle"></i> Interview Question</h3>
-                    <p class="question"><strong>"How would you explain responsive web design to a non-technical person?"</strong></p>
-                    <p>
+                    <h3 data-i18n="reflection.item1.heading"><i class="bi bi-question-circle"></i> Interview Question</h3>
+                    <p class="question"><strong data-i18n="reflection.item1.question">"How would you explain responsive web design to a non-technical person?"</strong></p>
+                    <p data-i18n="reflection.item1.answer">
                         I would compare responsive web design to a smart piece of furniture that adjusts to fit any room. Just like a table that can expand or shrink depending on your space, a responsive website automatically adapts its layout to fit different screen sizes—phones, tablets, and desktops. This ensures users have a great experience no matter what device they're using. Bootstrap helps developers create these flexible layouts efficiently by using a grid system that reorganizes content based on screen size.
                     </p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="reflection-box">
-                    <h3><i class="bi bi-robot"></i> Probabilistic AI</h3>
-                    <p class="question"><strong>"How might AI help improve web accessibility?"</strong></p>
-                    <p>
+                    <h3 data-i18n="reflection.item2.heading"><i class="bi bi-robot"></i> Probabilistic AI</h3>
+                    <p class="question"><strong data-i18n="reflection.item2.question">"How might AI help improve web accessibility?"</strong></p>
+                    <p data-i18n="reflection.item2.answer">
                         Probabilistic AI can analyze web content and automatically suggest accessibility improvements, like detecting missing alt text, identifying color contrast issues, or recommending semantic HTML elements. Machine learning models can predict which changes would have the highest impact on user experience for people with disabilities. AI can also generate alternative descriptions for images and test RTL layouts across multiple languages, helping developers create more inclusive websites faster.
                     </p>
                 </div>
             </div>
         </div>
         <div class="reflection-box mt-4">
-            <h3><i class="bi bi-linkedin"></i> LinkedIn Post</h3>
-            <p class="question"><strong>Share your learning journey on sustainability and web development:</strong></p>
-            <blockquote class="linkedin-post">
+            <h3 data-i18n="reflection.item3.heading"><i class="bi bi-linkedin"></i> LinkedIn Post</h3>
+            <p class="question"><strong data-i18n="reflection.item3.question">Share your learning journey on sustainability and web development:</strong></p>
+            <blockquote class="linkedin-post" data-i18n="reflection.item3.answer">
                 "Just built an accessible, RTL-compatible Intel Sustainability Timeline! 🌍 This project taught me that responsive web design isn't just about looks—it's about creating inclusive experiences for everyone, regardless of device or language. Using Bootstrap's grid system and accessibility best practices, I learned how modern web development bridges technology and social responsibility. Excited to apply these skills to create more accessible digital experiences. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"
             </blockquote>
         </div>
@@ -341,19 +513,19 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-md-4">
-                <h5>About Intel</h5>
-                <p>Intel is a leading technology company committed to innovation and sustainability.</p>
+                <h5 data-i18n="footer.aboutTitle">About Intel</h5>
+                <p data-i18n="footer.aboutText">Intel is a leading technology company committed to innovation and sustainability.</p>
             </div>
             <div class="col-md-4">
-                <h5>Quick Links</h5>
+                <h5 data-i18n="footer.quickLinksTitle">Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="#reflection">Reflections</a></li>
+                    <li><a href="#timeline" data-i18n="footer.linkTimeline">Timeline</a></li>
+                    <li><a href="#faqs" data-i18n="footer.linkFaqs">FAQs</a></li>
+                    <li><a href="#reflection" data-i18n="footer.linkReflection">Reflections</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5>Follow Us</h5>
+                <h5 data-i18n="footer.followTitle">Follow Us</h5>
                 <div class="social-links">
                     <a href="#" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter"></i></a>
                     <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -363,62 +535,565 @@
         </div>
         <hr>
         <div class="text-center py-3">
-            <p>&copy; 2024 Intel Corporation. Committed to sustainability through technology and innovation.</p>
-            <p class="footer-hint">Scroll horizontally to explore Intel's history, then think about your next big idea.</p>
+            <p data-i18n="footer.bottomText">&copy; 2024 Intel Corporation. Committed to sustainability through technology and innovation.</p>
+            <p class="footer-hint" data-i18n="footer.bottomHint">Scroll horizontally to explore Intel's history, then think about your next big idea.</p>
         </div>
     </div>
 </footer>
 
-<!-- Language Detection & RTL Toggle Script -->
+<!-- Language Detection & RTL Toggle Script with Google Translate Detection -->
 <script>
-    // Auto-detect language and apply RTL layout
-    function detectLanguageAndApplyRTL() {
-        const htmlLang = document.documentElement.lang;
-        const browserLang = navigator.language || navigator.userLanguage;
+    // RTL languages list
+    const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi', 'ji', 'iw', 'ku', 'ps', 'sd'];
+
+    const translations = {
+        en: {
+            'hero.languageLabel': 'Page Language',
+            'hero.title': 'Intel: Sustainability Through the Ages',
+            'hero.description': 'Explore Intel\'s journey from its founding in 1968 to its sustainability innovations shaping the future today.',
+            'hero.ctaTimeline': 'Explore the timeline',
+            'hero.ctaReflection': 'See why it matters',
+            'hero.hint': 'Tip: hover over each card to reveal the story.',
+            'feature1.title': 'Innovation',
+            'feature1.text': 'Intel helped launch the era of modern computing, from microprocessors to new chip designs.',
+            'feature2.title': 'Impact',
+            'feature2.text': 'See how key milestones shaped Intel\'s move toward renewable energy and responsible growth.',
+            'feature3.title': 'Inspiration',
+            'feature3.text': 'Discover how technology and sustainability can work together to build a stronger future.',
+            'timeline.introTitle': 'Swipe through the milestones',
+            'timeline.introText': 'Each card highlights a moment that helped Intel grow and become more sustainable.',
+            'timeline.card1.title': 'Intel Founded',
+            'timeline.card1.text': 'Robert Noyce and Gordon Moore establish Intel, beginning a new era of semiconductor innovation.',
+            'timeline.card2.title': 'First Microprocessor',
+            'timeline.card2.text': 'Intel releases the 4004, the world\'s first commercial microprocessor.',
+            'timeline.card3.title': '8086 Processor',
+            'timeline.card3.text': 'Intel launches the 8086 processor, establishing the x86 architecture.',
+            'timeline.card4.title': '386 Processor',
+            'timeline.card4.text': 'Intel introduces 32-bit computing with the revolutionary 386 processor.',
+            'timeline.card5.title': 'Peak GHG Emissions',
+            'timeline.card5.text': 'Intel begins major investments in renewable energy and sustainable manufacturing.',
+            'timeline.card6.title': 'RISE Strategy',
+            'timeline.card6.text': 'Intel launches its Responsible, Inclusive, Sustainable, and Enabling growth strategy.',
+            'timeline.card7.title': 'Net-Zero Goal',
+            'timeline.card7.text': 'Intel commits to achieving net-zero greenhouse gas emissions by 2040.',
+            'timeline.card8.title': '99% Renewable Electricity',
+            'timeline.card8.text': 'Intel reaches 99% renewable electricity use across global operations.',
+            'timeline.card9.title': 'Sustainability Summit',
+            'timeline.card9.text': 'Intel hosts its first Sustainability Summit focused on future manufacturing solutions.',
+            'pillars.title': 'Intel\'s Sustainability Pillars',
+            'pillars.card1.title': 'Energy Efficiency',
+            'pillars.card1.text': 'Intel invests in next-generation chip designs that use less power while delivering more performance.',
+            'pillars.card1.button': 'Learn More',
+            'pillars.card2.title': 'Renewable Energy',
+            'pillars.card2.text': 'By 2030, Intel aims to use 100% renewable electricity at all US manufacturing sites.',
+            'pillars.card2.button': 'Learn More',
+            'pillars.card3.title': 'Circular Economy',
+            'pillars.card3.text': 'Intel works to reduce waste and improve recycling practices throughout its supply chain.',
+            'pillars.card3.button': 'Learn More',
+            'faq.title': 'Frequently Asked Questions',
+            'faq1.question': 'What is Intel\'s commitment to energy efficiency?',
+            'faq1.answer': 'Intel designs processors and technologies that deliver more computing power while using less energy. The company continually invests in advanced manufacturing processes and efficient chip architectures to reduce environmental impact.',
+            'faq2.question': 'How does Intel support renewable energy?',
+            'faq2.answer': 'Intel invests in renewable energy sources such as solar and wind power to support manufacturing operations. The company has set ambitious goals to increase renewable electricity usage and reduce greenhouse gas emissions globally.',
+            'faq3.question': 'What is Intel\'s circular economy approach?',
+            'faq3.answer': 'Intel works to reduce waste by reusing materials, increasing recycling efforts, and improving supply chain sustainability. This circular economy approach helps conserve resources and minimize environmental impact throughout product lifecycles.',
+            'faq4.question': 'What is Intel\'s net-zero goal?',
+            'faq4.answer': 'Intel has committed to achieving net-zero greenhouse gas emissions across its global operations by 2040 through energy efficiency, renewable electricity, and innovative manufacturing solutions.',
+            'faq5.question': 'Why is sustainability important for technology companies?',
+            'faq5.answer': 'Technology companies consume significant energy and resources. Sustainable practices help reduce environmental impact while supporting innovation, long-term business growth, and responsible use of natural resources.',
+            'subscription.title': 'Stay Updated on Sustainability News',
+            'subscription.text': 'Subscribe to Intel\'s sustainability newsletter for the latest updates on our environmental initiatives.',
+            'subscription.label': 'Email Address',
+            'subscription.placeholder': 'your.email@example.com',
+            'subscription.button': 'Subscribe',
+            'subscription.privacy': 'We respect your privacy. Your email will never be shared.',
+            'reflection.title': 'Reflection',
+            'reflection.heading': 'Reflections on Learning',
+            'reflection.item1.heading': 'Interview Question',
+            'reflection.item1.question': '"How would you explain responsive web design to a non-technical person?"',
+            'reflection.item1.answer': 'I would compare responsive web design to a smart piece of furniture that adjusts to fit any room. Just like a table that can expand or shrink depending on your space, a responsive website automatically adapts its layout to fit different screen sizes—phones, tablets, and desktops. This ensures users have a great experience no matter what device they\'re using. Bootstrap helps developers create these flexible layouts efficiently by using a grid system that reorganizes content based on screen size.',
+            'reflection.item2.heading': 'Probabilistic AI',
+            'reflection.item2.question': '"How might AI help improve web accessibility?"',
+            'reflection.item2.answer': 'Probabilistic AI can analyze web content and automatically suggest accessibility improvements, like detecting missing alt text, identifying color contrast issues, or recommending semantic HTML elements. Machine learning models can predict which changes would have the highest impact on user experience for people with disabilities. AI can also generate alternative descriptions for images and test RTL layouts across multiple languages, helping developers create more inclusive websites faster.',
+            'reflection.item3.heading': 'LinkedIn Post',
+            'reflection.item3.question': 'Share your learning journey on sustainability and web development:',
+            'reflection.item3.answer': `"Just built an accessible, RTL-compatible Intel Sustainability Timeline! 🌍 This project taught me that responsive web design isn't just about looks—it's about creating inclusive experiences for everyone, regardless of device or language. Using Bootstrap's grid system and accessibility best practices, I learned how modern web development bridges technology and social responsibility. Excited to apply these skills to create more accessible digital experiences. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"`,
+            'footer.aboutTitle': 'About Intel',
+            'footer.aboutText': 'Intel is a leading technology company committed to innovation and sustainability.',
+            'footer.quickLinksTitle': 'Quick Links',
+            'footer.linkTimeline': 'Timeline',
+            'footer.linkFaqs': 'FAQs',
+            'footer.linkReflection': 'Reflections',
+            'footer.followTitle': 'Follow Us',
+            'footer.bottomText': '© 2024 Intel Corporation. Committed to sustainability through technology and innovation.',
+            'footer.bottomHint': 'Scroll horizontally to explore Intel\'s history, then think about your next big idea.'
+        },
+        es: {
+            'hero.languageLabel': 'Idioma de la página',
+            'hero.title': 'Intel: Sostenibilidad a través del tiempo',
+            'hero.description': 'Explora el viaje de Intel desde su fundación en 1968 hasta sus innovaciones en sostenibilidad que dan forma al futuro hoy.',
+            'hero.ctaTimeline': 'Explorar la línea de tiempo',
+            'hero.ctaReflection': 'Ver por qué importa',
+            'hero.hint': 'Consejo: pasa el cursor sobre cada tarjeta para revelar la historia.',
+            'feature1.title': 'Innovación',
+            'feature1.text': 'Intel ayudó a lanzar la era de la informática moderna, desde microprocesadores hasta nuevos diseños de chips.',
+            'feature2.title': 'Impacto',
+            'feature2.text': 'Descubre cómo hitos clave marcaron el movimiento de Intel hacia la energía renovable y el crecimiento responsable.',
+            'feature3.title': 'Inspiración',
+            'feature3.text': 'Descubre cómo la tecnología y la sostenibilidad pueden trabajar juntas para construir un futuro más fuerte.',
+            'timeline.introTitle': 'Desliza los hitos',
+            'timeline.introText': 'Cada tarjeta destaca un momento que ayudó a Intel a crecer y volverse más sostenible.',
+            'timeline.card1.title': 'Fundación de Intel',
+            'timeline.card1.text': 'Robert Noyce y Gordon Moore fundan Intel, comenzando una nueva era de innovación en semiconductores.',
+            'timeline.card2.title': 'Primer microprocesador',
+            'timeline.card2.text': 'Intel lanza el 4004, el primer microprocesador comercial del mundo.',
+            'timeline.card3.title': 'Procesador 8086',
+            'timeline.card3.text': 'Intel lanza el procesador 8086, estableciendo la arquitectura x86.',
+            'timeline.card4.title': 'Procesador 386',
+            'timeline.card4.text': 'Intel introduce la informática de 32 bits con el revolucionario procesador 386.',
+            'timeline.card5.title': 'Emisiones máximas de gases de efecto invernadero',
+            'timeline.card5.text': 'Intel comienza grandes inversiones en energía renovable y fabricación sostenible.',
+            'timeline.card6.title': 'Estrategia RISE',
+            'timeline.card6.text': 'Intel lanza su estrategia de crecimiento Responsable, Inclusiva, Sostenible y Capacitadora.',
+            'timeline.card7.title': 'Meta de cero emisiones netas',
+            'timeline.card7.text': 'Intel se compromete a lograr cero emisiones netas de gases de efecto invernadero para 2040.',
+            'timeline.card8.title': '99% de electricidad renovable',
+            'timeline.card8.text': 'Intel alcanza el 99% de uso de electricidad renovable en operaciones globales.',
+            'timeline.card9.title': 'Cumbre de sostenibilidad',
+            'timeline.card9.text': 'Intel organiza su primera Cumbre de Sostenibilidad centrada en soluciones de fabricación del futuro.',
+            'pillars.title': 'Pilares de sostenibilidad de Intel',
+            'pillars.card1.title': 'Eficiencia energética',
+            'pillars.card1.text': 'Intel invierte en diseños de chips de próxima generación que usan menos energía mientras entregan más rendimiento.',
+            'pillars.card1.button': 'Más información',
+            'pillars.card2.title': 'Energía renovable',
+            'pillars.card2.text': 'Para 2030, Intel apunta a usar 100% electricidad renovable en todos los sitios de fabricación en EE. UU.',
+            'pillars.card2.button': 'Más información',
+            'pillars.card3.title': 'Economía circular',
+            'pillars.card3.text': 'Intel trabaja para reducir el desperdicio y mejorar las prácticas de reciclaje en toda su cadena de suministro.',
+            'pillars.card3.button': 'Más información',
+            'faq.title': 'Preguntas frecuentes',
+            'faq1.question': '¿Cuál es el compromiso de Intel con la eficiencia energética?',
+            'faq1.answer': 'Intel diseña procesadores y tecnologías que ofrecen más potencia informática mientras usan menos energía. La compañía invierte continuamente en procesos de fabricación avanzados y arquitecturas de chips eficientes para reducir el impacto ambiental.',
+            'faq2.question': '¿Cómo apoya Intel la energía renovable?',
+            'faq2.answer': 'Intel invierte en fuentes de energía renovable como solar y eólica para respaldar las operaciones de fabricación. La empresa ha establecido objetivos ambiciosos para aumentar el uso de electricidad renovable y reducir las emisiones de gases de efecto invernadero a nivel global.',
+            'faq3.question': '¿Cuál es el enfoque de Intel hacia la economía circular?',
+            'faq3.answer': 'Intel trabaja para reducir el desperdicio reutilizando materiales, aumentando los esfuerzos de reciclaje y mejorando la sostenibilidad de la cadena de suministro. Este enfoque de economía circular ayuda a conservar recursos y minimizar el impacto ambiental durante el ciclo de vida de los productos.',
+            'faq4.question': '¿Cuál es la meta de cero emisiones netas de Intel?',
+            'faq4.answer': 'Intel se ha comprometido a lograr cero emisiones netas de gases de efecto invernadero en sus operaciones globales para 2040 mediante eficiencia energética, electricidad renovable y soluciones innovadoras de fabricación.',
+            'faq5.question': '¿Por qué es importante la sostenibilidad para las empresas tecnológicas?',
+            'faq5.answer': 'Las empresas tecnológicas consumen mucha energía y recursos. Las prácticas sostenibles ayudan a reducir el impacto ambiental mientras apoyan la innovación, el crecimiento empresarial a largo plazo y el uso responsable de los recursos naturales.',
+            'subscription.title': 'Mantente al día con noticias de sostenibilidad',
+            'subscription.text': 'Suscríbete al boletín de sostenibilidad de Intel para recibir las últimas actualizaciones sobre nuestras iniciativas ambientales.',
+            'subscription.label': 'Dirección de correo electrónico',
+            'subscription.placeholder': 'tu.email@ejemplo.com',
+            'subscription.button': 'Suscribirse',
+            'subscription.privacy': 'Respetamos tu privacidad. Tu correo electrónico nunca será compartido.',
+            'reflection.title': 'Reflexión',
+            'reflection.heading': 'Reflexiones sobre el aprendizaje',
+            'reflection.item1.heading': 'Pregunta de entrevista',
+            'reflection.item1.question': '"¿Cómo explicarías el diseño web responsive a una persona no técnica?"',
+            'reflection.item1.answer': 'Compararía el diseño web responsive con un mueble inteligente que se ajusta para adaptarse a cualquier habitación. Al igual que una mesa que puede expandirse o encogerse según tu espacio, un sitio web responsive se adapta automáticamente a diferentes tamaños de pantalla: teléfonos, tabletas y computadoras de escritorio. Esto asegura que los usuarios tengan una gran experiencia sin importar el dispositivo que estén usando. Bootstrap ayuda a los desarrolladores a crear estos diseños flexibles de manera eficiente utilizando un sistema de cuadrícula que reorganiza el contenido según el tamaño de la pantalla.',
+            'reflection.item2.heading': 'IA probabilística',
+            'reflection.item2.question': '"¿Cómo podría la IA mejorar la accesibilidad web?"',
+            'reflection.item2.answer': 'La IA probabilística puede analizar contenido web y sugerir automáticamente mejoras de accesibilidad, como detectar texto alternativo faltante, identificar problemas de contraste de color o recomendar elementos HTML semánticos. Los modelos de aprendizaje automático pueden predecir qué cambios tendrían el mayor impacto en la experiencia de los usuarios con discapacidades. La IA también puede generar descripciones alternativas para imágenes y probar diseños RTL en varios idiomas, ayudando a los desarrolladores a crear sitios web más inclusivos más rápido.',
+            'reflection.item3.heading': 'Publicación de LinkedIn',
+            'reflection.item3.question': 'Comparte tu viaje de aprendizaje sobre sostenibilidad y desarrollo web:',
+            'reflection.item3.answer': '"Acabo de construir una línea de tiempo de sostenibilidad de Intel accesible y compatible con RTL! 🌍 Este proyecto me enseñó que el diseño web responsive no solo es cuestión de apariencia: se trata de crear experiencias inclusivas para todos, independientemente del dispositivo o el idioma. Usando el sistema de cuadrícula de Bootstrap y las mejores prácticas de accesibilidad, aprendí cómo el desarrollo web moderno une la tecnología y la responsabilidad social. Estoy emocionado de aplicar estas habilidades para crear experiencias digitales más accesibles. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"',
+            'footer.aboutTitle': 'Acerca de Intel',
+            'footer.aboutText': 'Intel es una empresa tecnológica líder comprometida con la innovación y la sostenibilidad.',
+            'footer.quickLinksTitle': 'Enlaces rápidos',
+            'footer.linkTimeline': 'Línea de tiempo',
+            'footer.linkFaqs': 'Preguntas frecuentes',
+            'footer.linkReflection': 'Reflexiones',
+            'footer.followTitle': 'Síguenos',
+            'footer.bottomText': '© 2024 Intel Corporation. Comprometida con la sostenibilidad mediante la tecnología y la innovación.',
+            'footer.bottomHint': 'Desplázate horizontalmente para explorar la historia de Intel y luego piensa en tu próxima gran idea.'
+        },
+        fr: {
+            'hero.languageLabel': 'Langue de la page',
+            'hero.title': 'Intel : durabilité au fil du temps',
+            'hero.description': 'Découvrez le parcours d’Intel depuis sa fondation en 1968 jusqu’à ses innovations durables qui façonnent l’avenir aujourd’hui.',
+            'hero.ctaTimeline': 'Explorer la chronologie',
+            'hero.ctaReflection': 'Voir pourquoi c’est important',
+            'hero.hint': 'Astuce : survolez chaque carte pour découvrir l’histoire.',
+            'feature1.title': 'Innovation',
+            'feature1.text': 'Intel a contribué à lancer l’ère de l’informatique moderne, des microprocesseurs aux nouvelles conceptions de puces.',
+            'feature2.title': 'Impact',
+            'feature2.text': 'Découvrez comment des étapes clés ont façonné le passage d’Intel vers l’énergie renouvelable et une croissance responsable.',
+            'feature3.title': 'Inspiration',
+            'feature3.text': 'Découvrez comment la technologie et la durabilité peuvent travailler ensemble pour construire un avenir plus fort.',
+            'timeline.introTitle': 'Faites défiler les étapes',
+            'timeline.introText': 'Chaque carte met en avant un moment qui a aidé Intel à se développer et à devenir plus durable.',
+            'timeline.card1.title': 'Fondation d’Intel',
+            'timeline.card1.text': 'Robert Noyce et Gordon Moore fondent Intel, ouvrant une nouvelle ère d’innovation dans les semi-conducteurs.',
+            'timeline.card2.title': 'Premier microprocesseur',
+            'timeline.card2.text': 'Intel lance le 4004, le premier microprocesseur commercial au monde.',
+            'timeline.card3.title': 'Processeur 8086',
+            'timeline.card3.text': 'Intel lance le processeur 8086, établissant l’architecture x86.',
+            'timeline.card4.title': 'Processeur 386',
+            'timeline.card4.text': 'Intel introduit l’informatique 32 bits avec le révolutionnaire processeur 386.',
+            'timeline.card5.title': 'Émissions de GES au plus haut',
+            'timeline.card5.text': 'Intel commence d’importants investissements dans les énergies renouvelables et la fabrication durable.',
+            'timeline.card6.title': 'Stratégie RISE',
+            'timeline.card6.text': 'Intel lance sa stratégie de croissance Responsable, Inclusive, Durable et Enrichissante.',
+            'timeline.card7.title': 'Objectif zéro net',
+            'timeline.card7.text': 'Intel s’engage à atteindre zéro émission nette de gaz à effet de serre d’ici 2040.',
+            'timeline.card8.title': '99 % d’électricité renouvelable',
+            'timeline.card8.text': 'Intel atteint 99 % d’électricité renouvelable dans ses opérations mondiales.',
+            'timeline.card9.title': 'Sommet sur la durabilité',
+            'timeline.card9.text': 'Intel organise son premier Sommet sur la durabilité axé sur les solutions de fabrication du futur.',
+            'pillars.title': 'Piliers de durabilité d’Intel',
+            'pillars.card1.title': 'Efficacité énergétique',
+            'pillars.card1.text': 'Intel investit dans des conceptions de puces de nouvelle génération qui consomment moins d’énergie tout en offrant plus de performances.',
+            'pillars.card1.button': 'En savoir plus',
+            'pillars.card2.title': 'Énergie renouvelable',
+            'pillars.card2.text': 'D’ici 2030, Intel vise à utiliser 100 % d’électricité renouvelable sur tous les sites de fabrication aux États-Unis.',
+            'pillars.card2.button': 'En savoir plus',
+            'pillars.card3.title': 'Économie circulaire',
+            'pillars.card3.text': 'Intel travaille à réduire les déchets et à améliorer les pratiques de recyclage dans toute sa chaîne d’approvisionnement.',
+            'pillars.card3.button': 'En savoir plus',
+            'faq.title': 'Questions fréquemment posées',
+            'faq1.question': 'Quel est l’engagement d’Intel en matière d’efficacité énergétique ?',
+            'faq1.answer': 'Intel conçoit des processeurs et des technologies qui offrent plus de puissance de calcul tout en utilisant moins d’énergie. L’entreprise investit continuellement dans des processus de fabrication avancés et des architectures de puces efficaces pour réduire l’impact environnemental.',
+            'faq2.question': 'Comment Intel soutient-il les énergies renouvelables ?',
+            'faq2.answer': 'Intel investit dans des sources d’énergie renouvelable telles que le solaire et l’éolien pour soutenir les opérations de fabrication. L’entreprise s’est fixée des objectifs ambitieux pour augmenter l’utilisation de l’électricité renouvelable et réduire les émissions de gaz à effet de serre dans le monde.',
+            'faq3.question': 'Quelle est l’approche d’Intel en matière d’économie circulaire ?',
+            'faq3.answer': 'Intel travaille à réduire les déchets en réutilisant les matériaux, en augmentant les efforts de recyclage et en améliorant la durabilité de la chaîne d’approvisionnement. Cette approche d’économie circulaire aide à conserver les ressources et à minimiser l’impact environnemental tout au long du cycle de vie des produits.',
+            'faq4.question': 'Quel est l’objectif zéro net d’Intel ?',
+            'faq4.answer': 'Intel s’est engagé à atteindre zéro émission nette de gaz à effet de serre dans ses opérations mondiales d’ici 2040 grâce à l’efficacité énergétique, à l’électricité renouvelable et aux solutions de fabrication innovantes.',
+            'faq5.question': 'Pourquoi la durabilité est-elle importante pour les entreprises technologiques ?',
+            'faq5.answer': 'Les entreprises technologiques consomment beaucoup d’énergie et de ressources. Les pratiques durables aident à réduire l’impact environnemental tout en soutenant l’innovation, la croissance à long terme et l’utilisation responsable des ressources naturelles.',
+            'subscription.title': 'Restez informé des actualités sur la durabilité',
+            'subscription.text': 'Abonnez-vous à la newsletter de durabilité d’Intel pour recevoir les dernières mises à jour sur nos initiatives environnementales.',
+            'subscription.label': 'Adresse e-mail',
+            'subscription.placeholder': 'votre.email@exemple.com',
+            'subscription.button': 'S’abonner',
+            'subscription.privacy': 'Nous respectons votre vie privée. Votre e-mail ne sera jamais partagé.',
+            'reflection.title': 'Réflexion',
+            'reflection.heading': 'Réflexions sur l’apprentissage',
+            'reflection.item1.heading': 'Question d’entretien',
+            'reflection.item1.question': '"Comment expliqueriez-vous le design web responsive à une personne non technique ?"',
+            'reflection.item1.answer': 'Je comparerais le design web responsive à un meuble intelligent qui s’adapte à n’importe quelle pièce. Comme une table qui peut s’agrandir ou se rétrécir selon votre espace, un site web responsive s’adapte automatiquement à différentes tailles d’écran : téléphones, tablettes et ordinateurs de bureau. Cela garantit aux utilisateurs une excellente expérience quel que soit l’appareil utilisé. Bootstrap aide les développeurs à créer ces mises en page flexibles de manière efficace en utilisant un système de grille qui réorganise le contenu selon la taille de l’écran.',
+            'reflection.item2.heading': 'IA probabiliste',
+            'reflection.item2.question': '"Comment l’IA pourrait-elle améliorer l’accessibilité du web ?"',
+            'reflection.item2.answer': 'L’IA probabiliste peut analyser le contenu web et suggérer automatiquement des améliorations en matière d’accessibilité, telles que la détection du texte alternatif manquant, l’identification des problèmes de contraste des couleurs ou la recommandation d’éléments HTML sémantiques. Les modèles d’apprentissage automatique peuvent prédire quels changements auraient le plus grand impact sur l’expérience des utilisateurs en situation de handicap. L’IA peut également générer des descriptions alternatives pour les images et tester les mises en page RTL dans plusieurs langues, aidant ainsi les développeurs à créer des sites plus inclusifs plus rapidement.',
+            'reflection.item3.heading': 'Publication LinkedIn',
+            'reflection.item3.question': 'Partagez votre parcours d’apprentissage sur la durabilité et le développement web :',
+            'reflection.item3.answer': '"Je viens de créer une chronologie de durabilité Intel accessible et compatible RTL ! 🌍 Ce projet m’a appris que le design web responsive ne concerne pas seulement l’apparence : il s’agit de créer des expériences inclusives pour tous, quel que soit l’appareil ou la langue. En utilisant le système de grille Bootstrap et les bonnes pratiques d’accessibilité, j’ai appris comment le développement web moderne relie technologie et responsabilité sociale. Je suis impatient d’appliquer ces compétences pour créer des expériences numériques plus accessibles. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"',
+            'footer.aboutTitle': 'À propos d’Intel',
+            'footer.aboutText': 'Intel est une entreprise technologique de premier plan engagée en faveur de l’innovation et de la durabilité.',
+            'footer.quickLinksTitle': 'Liens rapides',
+            'footer.linkTimeline': 'Chronologie',
+            'footer.linkFaqs': 'FAQ',
+            'footer.linkReflection': 'Réflexions',
+            'footer.followTitle': 'Suivez-nous',
+            'footer.bottomText': '© 2024 Intel Corporation. Engagée en faveur de la durabilité grâce à la technologie et à l’innovation.',
+            'footer.bottomHint': 'Faites défiler horizontalement pour explorer l’histoire d’Intel, puis pensez à votre prochaine grande idée.'
+        },
+        ar: {
+            'hero.languageLabel': 'لغة الصفحة',
+            'hero.title': 'إنتل: الاستدامة عبر الزمن',
+            'hero.description': 'اكتشف رحلة إنتل منذ تأسيسها في عام 1968 وحتى ابتكاراتها في الاستدامة التي تشكل المستقبل اليوم.',
+            'hero.ctaTimeline': 'استكشاف الجدول الزمني',
+            'hero.ctaReflection': 'انظر لماذا يهم الأمر',
+            'hero.hint': 'نصيحة: مرر الماوس فوق كل بطاقة لكشف القصة.',
+            'feature1.title': 'الابتكار',
+            'feature1.text': 'ساعدت إنتل في إطلاق عصر الحوسبة الحديثة، من المعالجات الدقيقة إلى تصميمات الرقائق الجديدة.',
+            'feature2.title': 'التأثير',
+            'feature2.text': 'اكتشف كيف شكلت المعالم الرئيسة انتقال إنتل نحو الطاقة المتجددة والنمو المسؤول.',
+            'feature3.title': 'الإلهام',
+            'feature3.text': 'اكتشف كيف يمكن للتكنولوجيا والاستدامة أن تعملا معًا لبناء مستقبل أقوى.',
+            'timeline.introTitle': 'مر عبر المعالم',
+            'timeline.introText': 'كل بطاقة تبرز لحظة ساعدت إنتل على النمو وأن تصبح أكثر استدامة.',
+            'timeline.card1.title': 'تأسيس إنتل',
+            'timeline.card1.text': 'أسس روبرت نويس وجوردون مور إنتل، مما بدأ حقبة جديدة من الابتكار في أشباه الموصلات.',
+            'timeline.card2.title': 'المعالِج الدقيق الأول',
+            'timeline.card2.text': 'أطلقت إنتل 4004، أول معالج دقيق تجاري في العالم.',
+            'timeline.card3.title': 'معالج 8086',
+            'timeline.card3.text': 'أطلقت إنتل المعالج 8086، مما أسس بنية x86.',
+            'timeline.card4.title': 'معالج 386',
+            'timeline.card4.text': 'قدمت إنتل الحوسبة 32 بت مع المعالج الثوري 386.',
+            'timeline.card5.title': 'ذروة انبعاثات الغازات الدفيئة',
+            'timeline.card5.text': 'بدأت إنتل استثمارات كبيرة في الطاقة المتجددة والتصنيع المستدام.',
+            'timeline.card6.title': 'استراتيجية RISE',
+            'timeline.card6.text': 'أطلقت إنتل استراتيجيتها للنمو المسؤولة والشاملة والمستدامة والمُمكنة.',
+            'timeline.card7.title': 'هدف صافي الصفر',
+            'timeline.card7.text': 'تلتزم إنتل بتحقيق صافي صفر من انبعاثات الغازات الدفيئة بحلول عام 2040.',
+            'timeline.card8.title': '99% كهرباء متجددة',
+            'timeline.card8.text': 'تصل إنتل إلى 99% من استخدام الكهرباء المتجددة في العمليات العالمية.',
+            'timeline.card9.title': 'قمة الاستدامة',
+            'timeline.card9.text': 'تستضيف إنتل أول قمة للاستدامة تركز على حلول التصنيع المستقبلية.',
+            'pillars.title': 'أركان الاستدامة في إنتل',
+            'pillars.card1.title': 'كفاءة الطاقة',
+            'pillars.card1.text': 'تستثمر إنتل في تصميمات رقائق الجيل القادم التي تستخدم طاقة أقل مع تقديم أداء أعلى.',
+            'pillars.card1.button': 'أعرف أكثر',
+            'pillars.card2.title': 'الطاقة المتجددة',
+            'pillars.card2.text': 'بحلول 2030، تهدف إنتل إلى استخدام 100% كهرباء متجددة في جميع مواقع التصنيع بالولايات المتحدة.',
+            'pillars.card2.button': 'أعرف أكثر',
+            'pillars.card3.title': 'الاقتصاد الدائري',
+            'pillars.card3.text': 'تعمل إنتل على تقليل النفايات وتحسين ممارسات إعادة التدوير في سلسلة التوريد الخاصة بها.',
+            'pillars.card3.button': 'أعرف أكثر',
+            'faq.title': 'الأسئلة الشائعة',
+            'faq1.question': 'ما هو التزام إنتل بكفاءة الطاقة؟',
+            'faq1.answer': 'تقوم إنتل بتصميم معالجات وتقنيات توفر طاقة حوسبة أكبر مع استخدام طاقة أقل. تستثمر الشركة باستمرار في عمليات تصنيع متقدمة وهندسات رقائق فعالة لتقليل الأثر البيئي.',
+            'faq2.question': 'كيف تدعم إنتل الطاقة المتجددة؟',
+            'faq2.answer': 'تستثمر إنتل في مصادر الطاقة المتجددة مثل الطاقة الشمسية والرياح لدعم عمليات التصنيع. وضعت الشركة أهدافًا طموحة لزيادة استخدام الكهرباء المتجددة وتقليل انبعاثات الغازات الدفيئة على مستوى العالم.',
+            'faq3.question': 'ما هو نهج إنتل في الاقتصاد الدائري؟',
+            'faq3.answer': 'تعمل إنتل على تقليل النفايات عن طريق إعادة استخدام المواد وزيادة جهود التدوير وتحسين استدامة سلسلة التوريد. يساعد هذا النهج في الاقتصاد الدائري على الحفاظ على الموارد وتقليل التأثير البيئي طوال دورة حياة المنتج.',
+            'faq4.question': 'ما هو هدف صافي الصفر لإنتل؟',
+            'faq4.answer': 'تعهدت إنتل بتحقيق صافي صفر من انبعاثات الغازات الدفيئة في عملياتها العالمية بحلول عام 2040 من خلال كفاءة الطاقة والكهرباء المتجددة وحلول التصنيع المبتكرة.',
+            'faq5.question': 'لماذا تعتبر الاستدامة مهمة لشركات التكنولوجيا؟',
+            'faq5.answer': 'تستهلك شركات التكنولوجيا كميات كبيرة من الطاقة والموارد. تساعد الممارسات المستدامة على تقليل الأثر البيئي مع دعم الابتكار والنمو طويل الأجل والاستخدام المسؤول للموارد الطبيعية.',
+            'subscription.title': 'ابقَ مطلعًا على أخبار الاستدامة',
+            'subscription.text': 'اشترك في النشرة الإخبارية للاستدامة من إنتل للحصول على أحدث التحديثات حول مبادراتنا البيئية.',
+            'subscription.label': 'البريد الإلكتروني',
+            'subscription.placeholder': 'بريدك.الإلكتروني@مثال.com',
+            'subscription.button': 'اشتراك',
+            'subscription.privacy': 'نحترم خصوصيتك. لن يتم مشاركة بريدك الإلكتروني أبدًا.',
+            'reflection.title': 'انعكاس',
+            'reflection.heading': 'انعكاسات حول التعلم',
+            'reflection.item1.heading': 'سؤال مقابلة',
+            'reflection.item1.question': '"كيف تشرح التصميم المتجاوب لشخص غير تقني؟"',
+            'reflection.item1.answer': 'أقارن التصميم المتجاوب بقطعة أثاث ذكية تتكيف لتناسب أي غرفة. مثل طاولة يمكن أن تتمدد أو تنكمش حسب مساحتك، يتكيف الموقع المتجاوب تلقائيًا مع مختلف أحجام الشاشات — الهواتف والأجهزة اللوحية وأجهزة سطح المكتب. هذا يضمن تجربة رائعة للمستخدمين بغض النظر عن الجهاز الذي يستخدمونه. تساعد Bootstrap المطورين في إنشاء هذه التصاميم المرنة بكفاءة باستخدام نظام شبكات يعيد تنظيم المحتوى بناءً على حجم الشاشة.',
+            'reflection.item2.heading': 'الذكاء الاصطناعي الاحتمالي',
+            'reflection.item2.question': '"كيف يمكن للذكاء الاصطناعي أن يحسن إمكانية الوصول إلى الويب؟"',
+            'reflection.item2.answer': 'يمكن للذكاء الاصطناعي الاحتمالي تحليل محتوى الويب واقتراح تحسينات إمكانية الوصول تلقائيًا، مثل اكتشاف النص البديل المفقود، وتحديد مشكلات تباين الألوان، أو التوصية بعناصر HTML الدلالية. يمكن لنماذج التعلم الآلي التنبؤ بالتغييرات التي سيكون لها أكبر تأثير على تجربة المستخدمين من ذوي الإعاقة. يمكن للذكاء الاصطناعي أيضًا إنشاء أوصاف بديلة للصور واختبار تنسيقات RTL عبر لغات متعددة، مما يساعد المطورين على إنشاء مواقع أكثر شمولاً بسرعة أكبر.',
+            'reflection.item3.heading': 'منشور لينكدإن',
+            'reflection.item3.question': 'شارك رحلة تعلمك حول الاستدامة وتطوير الويب:',
+            'reflection.item3.answer': '"لقد أنشأت للتو جدولًا زمنيًا للاستدامة من إنتل قابلًا للوصول ومتوافقًا مع RTL! 🌍 علمني هذا المشروع أن التصميم المتجاوب للويب ليس مجرد مظهر — بل يتعلق بإنشاء تجارب شاملة للجميع، بغض النظر عن الجهاز أو اللغة. باستخدام نظام الشبكات في Bootstrap وأفضل ممارسات إمكانية الوصول، تعلمت كيف يربط تطوير الويب الحديث بين التكنولوجيا والمسؤولية الاجتماعية. متحمس لتطبيق هذه المهارات لإنشاء تجارب رقمية أكثر وصولاً. #WebDevelopment #Sustainability #Accessibility #Bootstrap #Learning"',
+            'footer.aboutTitle': 'حول إنتل',
+            'footer.aboutText': 'إنتل شركة تكنولوجية رائدة ملتزمة بالابتكار والاستدامة.',
+            'footer.quickLinksTitle': 'روابط سريعة',
+            'footer.linkTimeline': 'الجدول الزمني',
+            'footer.linkFaqs': 'الأسئلة الشائعة',
+            'footer.linkReflection': 'انعكاسات',
+            'footer.followTitle': 'تابعنا',
+            'footer.bottomText': '© 2024 Intel Corporation. ملتزمة بالاستدامة من خلال التكنولوجيا والابتكار.',
+            'footer.bottomHint': 'قم بالتمرير أفقيًا لاستكشاف تاريخ إنتل ثم فكر في فكرتك الكبيرة التالية.'
+        }
+    };
+    
+    // AI-powered language change detector
+    class LanguageChangeDetector {
+        constructor() {
+            this.currentLang = document.documentElement.lang;
+            this.observerActive = false;
+            this.captureDefaultText();
+            this.init();
+        }
+
+        captureDefaultText() {
+            this.defaultTextMap = {};
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+                if (key) {
+                    this.defaultTextMap[key] = element.innerText.replace(/\s+/g, ' ').trim();
+                }
+            });
+            const placeholderInput = document.querySelector('[data-i18n-placeholder]');
+            if (placeholderInput) {
+                this.defaultPlaceholder = placeholderInput.getAttribute('placeholder') || '';
+            }
+        }
         
-        // RTL languages: Arabic, Hebrew, Persian, Urdu, etc.
-        const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi'];
+        // Check if a language code represents an RTL language
+        isRTLLanguage(langCode) {
+            if (!langCode) return false;
+            // Extract base language code (e.g., 'ar' from 'ar-SA')
+            const baseLang = langCode.split('-')[0].toLowerCase();
+            return rtlLanguages.includes(baseLang);
+        }
         
-        // Check if current or browser language is RTL
-        const isRTL = rtlLanguages.some(lang => 
-            htmlLang.includes(lang) || browserLang.includes(lang)
-        );
+        // Apply RTL or LTR based on language
+        applyTextDirection(langCode) {
+            const baseLang = (langCode || 'en').split('-')[0].toLowerCase();
+            const isRTL = this.isRTLLanguage(baseLang);
+            
+            // Update DOM
+            document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+            document.documentElement.lang = baseLang;
+            
+            // Update body class
+            if (isRTL) {
+                document.body.classList.add('rtl-mode');
+            } else {
+                document.body.classList.remove('rtl-mode');
+            }
+
+            // Translate page text
+            this.translatePage(baseLang);
+            
+            // Save preferences
+            localStorage.setItem('textDirection', isRTL ? 'rtl' : 'ltr');
+            localStorage.setItem('selectedLanguage', baseLang);
+            this.currentLang = baseLang;
+            
+            console.log(`✓ Language changed to ${baseLang} - Direction: ${isRTL ? 'RTL' : 'LTR'}`);
+        }
+
+        translatePage(langCode) {
+            const baseLang = (langCode || 'en').split('-')[0].toLowerCase();
+            const map = baseLang === 'en' ? this.defaultTextMap : translations[baseLang] || translations.en || {};
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+                const translated = map[key];
+                if (translated) {
+                    this.updateElementText(element, translated);
+                }
+            });
+
+            const placeholderInput = document.querySelector('[data-i18n-placeholder]');
+            if (placeholderInput) {
+                const translatedPlaceholder = baseLang === 'en' ? this.defaultPlaceholder : map['subscription.placeholder'];
+                if (translatedPlaceholder) {
+                    placeholderInput.setAttribute('placeholder', translatedPlaceholder);
+                }
+            }
+        }
+
+        updateElementText(element, text) {
+            const textNodes = Array.from(element.childNodes).filter(
+                (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+            );
+            if (textNodes.length > 0) {
+                textNodes[0].textContent = text;
+            } else {
+                element.textContent = text;
+            }
+        }
         
-        if (isRTL) {
-            document.documentElement.dir = 'rtl';
-            document.body.classList.add('rtl-mode');
-            localStorage.setItem('textDirection', 'rtl');
-        } else {
-            document.documentElement.dir = 'ltr';
-            localStorage.setItem('textDirection', 'ltr');
+        // Detect Google Translate and other automatic translations
+        detectTranslationChange() {
+            const newLang = document.documentElement.lang;
+            
+            // Check if Google Translate or similar tool has modified the page
+            if (document.body.className.includes('translated') || 
+                window.location.hostname.includes('translate.goog')) {
+                console.log('✓ Google Translate detected');
+                return true;
+            }
+            
+            return newLang !== this.currentLang;
+        }
+        
+        // Setup mutation observer to watch for language changes
+        setupObserver() {
+            if (this.observerActive) return;
+            
+            const observer = new MutationObserver((mutations) => {
+                // Check for changes to the html element's lang attribute
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+                        const newLang = document.documentElement.lang;
+                        if (newLang !== this.currentLang) {
+                            console.log(`🔄 Language change detected: ${this.currentLang} → ${newLang}`);
+                            this.currentLang = newLang;
+                            this.applyTextDirection(newLang);
+                        }
+                    }
+                    
+                    // Detect when Google Translate adds the translated class
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        if (document.body.className.includes('translated')) {
+                            const detectedLang = this.detectPageLanguage();
+                            if (detectedLang) {
+                                console.log(`🌐 Auto-translation detected: ${detectedLang}`);
+                                this.applyTextDirection(detectedLang);
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Watch the html element for attribute changes
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['lang', 'class', 'dir']
+            });
+            
+            // Also watch the body for translation indicators
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            
+            this.observerActive = true;
+            console.log('✓ Language change observer activated');
+        }
+        
+        // Detect current page language from various sources
+        detectPageLanguage() {
+            // Priority 1: Check html lang attribute
+            if (document.documentElement.lang) {
+                return document.documentElement.lang;
+            }
+            
+            // Priority 2: Check meta tags
+            const langMeta = document.querySelector('meta[http-equiv="content-language"]');
+            if (langMeta) {
+                return langMeta.getAttribute('content');
+            }
+            
+            // Priority 3: Browser language
+            return navigator.language || navigator.userLanguage;
+        }
+        
+        // Auto-detect language and apply RTL on page load
+        autoDetect() {
+            const htmlLang = document.documentElement.lang;
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Determine language to use
+            const langToUse = htmlLang || browserLang;
+            
+            // Store and apply
+            this.currentLang = langToUse;
+            this.applyTextDirection(langToUse);
+        }
+        
+        // Initialize the detector
+        init() {
+            // Auto-detect on load
+            this.autoDetect();
+            
+            // Setup observer for runtime changes
+            this.setupObserver();
+            
+            // Listen for visibility changes (helps detect translation changes)
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    setTimeout(() => this.detectTranslationChange(), 100);
+                }
+            });
         }
     }
     
-    // Add language toggle function
+    // Manual language toggle function
     function toggleLanguage(lang) {
-        document.documentElement.lang = lang;
-        const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi'];
-        
-        if (rtlLanguages.includes(lang)) {
-            document.documentElement.dir = 'rtl';
-            document.body.classList.add('rtl-mode');
-            localStorage.setItem('textDirection', 'rtl');
-            localStorage.setItem('selectedLanguage', lang);
-        } else {
-            document.documentElement.dir = 'ltr';
-            document.body.classList.remove('rtl-mode');
-            localStorage.setItem('textDirection', 'ltr');
-            localStorage.setItem('selectedLanguage', lang);
+        const detector = window.languageDetector;
+        if (detector) {
+            detector.applyTextDirection(lang);
+        }
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.value = lang;
         }
     }
     
-    // Apply settings on page load
+    // Initialize on DOM ready
     document.addEventListener('DOMContentLoaded', function() {
+        // Create global detector instance
+        window.languageDetector = new LanguageChangeDetector();
+        
+        // Check for saved language preference
         const savedLang = localStorage.getItem('selectedLanguage');
         if (savedLang) {
-            toggleLanguage(savedLang);
-        } else {
-            detectLanguageAndApplyRTL();
+            window.languageDetector.applyTextDirection(savedLang);
+        }
+
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.value = savedLang || document.documentElement.lang || 'en';
         }
         
         // Form submission handler
