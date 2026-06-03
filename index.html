@@ -25,12 +25,9 @@
 
         <div class="language-menu">
             <label for="languageSelect" data-i18n="hero.languageLabel">Page Language</label>
-            <select id="languageSelect" class="form-select form-select-sm" onchange="toggleLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-                <option value="ar">العربية</option>
-            </select>
+            <select id="languageSelect" class="form-select form-select-sm" onchange="toggleLanguage(this.value)"></select>
+            <p class="language-note small mt-2" data-i18n="hero.translateNote">Full language support uses built-in page translations when available and Google Translate for every other language.</p>
+            <div id="google_translate_element" style="display:none;" aria-hidden="true"></div>
         </div>
 
         <h1 data-i18n="hero.title">Intel: Sustainability Through the Ages</h1>
@@ -543,6 +540,43 @@
 
 <!-- Language Detection & RTL Toggle Script with Google Translate Detection -->
 <script>
+    const allLanguageCodes = [
+        'af','sq','am','ar','hy','az','eu','be','bn','bs','bg','ca','ceb','ny','zh','zh-CN','zh-TW',
+        'co','hr','cs','da','nl','en','eo','et','tl','fi','fr','fy','gl','ka','de','el','gu','ht',
+        'ha','haw','he','hi','hmn','hu','is','ig','id','ga','it','ja','jw','kn','kk','km','ko','ku',
+        'ky','lo','la','lv','lt','lb','mk','mg','ms','ml','mt','mi','mr','mn','my','ne','no','ps',
+        'fa','pl','pt','ro','ru','sm','gd','sr','st','sn','sd','si','sk','sl','so','es','su','sw',
+        'sv','tg','ta','te','th','tr','uk','ur','uz','vi','cy','xh','yi','yo','zu'
+    ];
+
+    function getLanguageName(code) {
+        if (typeof Intl !== 'undefined' && typeof Intl.DisplayNames === 'function') {
+            try {
+                const displayNames = new Intl.DisplayNames(['en'], { type: 'language' });
+                const name = displayNames.of(code);
+                return name || code;
+            } catch (error) {
+                return code;
+            }
+        }
+        return code;
+    }
+
+    function populateLanguageOptions(selectedLang = 'en') {
+        const languageSelect = document.getElementById('languageSelect');
+        if (!languageSelect) return;
+
+        const baseSelected = selectedLang.split('-')[0].toLowerCase();
+        const optionsHtml = allLanguageCodes.map((code) => {
+            const value = code.toLowerCase();
+            const label = getLanguageName(code);
+            return `<option value="${value}">${label}</option>`;
+        }).join('');
+
+        languageSelect.innerHTML = optionsHtml;
+        languageSelect.value = allLanguageCodes.includes(baseSelected) ? baseSelected : 'en';
+    }
+
     // RTL languages list
     const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi', 'ji', 'iw', 'ku', 'ps', 'sd'];
 
@@ -554,6 +588,7 @@
             'hero.ctaTimeline': 'Explore the timeline',
             'hero.ctaReflection': 'See why it matters',
             'hero.hint': 'Tip: hover over each card to reveal the story.',
+            'hero.translateNote': 'Full language support uses built-in page translations when available and Google Translate for every other language.',
             'feature1.title': 'Innovation',
             'feature1.text': 'Intel helped launch the era of modern computing, from microprocessors to new chip designs.',
             'feature2.title': 'Impact',
@@ -635,6 +670,7 @@
             'hero.ctaTimeline': 'Explorar la línea de tiempo',
             'hero.ctaReflection': 'Ver por qué importa',
             'hero.hint': 'Consejo: pasa el cursor sobre cada tarjeta para revelar la historia.',
+            'hero.translateNote': 'El soporte completo de idiomas usa traducciones integradas de la página cuando están disponibles y Google Translate para todos los demás idiomas.',
             'feature1.title': 'Innovación',
             'feature1.text': 'Intel ayudó a lanzar la era de la informática moderna, desde microprocesadores hasta nuevos diseños de chips.',
             'feature2.title': 'Impacto',
@@ -716,6 +752,7 @@
             'hero.ctaTimeline': 'Explorer la chronologie',
             'hero.ctaReflection': 'Voir pourquoi c’est important',
             'hero.hint': 'Astuce : survolez chaque carte pour découvrir l’histoire.',
+            'hero.translateNote': 'La prise en charge complète des langues utilise les traductions intégrées de la page lorsque disponible et Google Translate pour les autres langues.',
             'feature1.title': 'Innovation',
             'feature1.text': 'Intel a contribué à lancer l’ère de l’informatique moderne, des microprocesseurs aux nouvelles conceptions de puces.',
             'feature2.title': 'Impact',
@@ -797,6 +834,7 @@
             'hero.ctaTimeline': 'استكشاف الجدول الزمني',
             'hero.ctaReflection': 'انظر لماذا يهم الأمر',
             'hero.hint': 'نصيحة: مرر الماوس فوق كل بطاقة لكشف القصة.',
+            'hero.translateNote': 'يدعم اختيار اللغة كل اللغات باستخدام الترجمة المدمجة عندما تكون متاحة وGoogle Translate للغات الأخرى.',
             'feature1.title': 'الابتكار',
             'feature1.text': 'ساعدت إنتل في إطلاق عصر الحوسبة الحديثة، من المعالجات الدقيقة إلى تصميمات الرقائق الجديدة.',
             'feature2.title': 'التأثير',
@@ -1070,16 +1108,67 @@
     
     // Manual language toggle function
     function toggleLanguage(lang) {
-        const detector = window.languageDetector;
-        if (detector) {
-            detector.applyTextDirection(lang);
-        }
         const languageSelect = document.getElementById('languageSelect');
         if (languageSelect) {
             languageSelect.value = lang;
         }
+
+        const detector = window.languageDetector;
+        if (translations[lang]) {
+            if (detector) {
+                detector.applyTextDirection(lang);
+            }
+            if (window.googleTranslateReady) {
+                const googleSelect = document.querySelector('.goog-te-combo');
+                if (googleSelect) {
+                    googleSelect.value = 'en';
+                    googleSelect.dispatchEvent(new Event('change'));
+                }
+            }
+            return;
+        }
+
+        if (window.googleTranslateReady) {
+            triggerGoogleTranslate(lang);
+            return;
+        }
+
+        if (detector) {
+            detector.applyTextDirection(lang);
+        }
     }
-    
+
+    function googleTranslateElementInit() {
+        if (typeof google === 'undefined' || !google.translate) {
+            window.googleTranslateReady = false;
+            return;
+        }
+
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            autoDisplay: false
+        }, 'google_translate_element');
+
+        window.googleTranslateReady = true;
+        console.log('✓ Google Translate widget initialized');
+    }
+
+    function triggerGoogleTranslate(lang) {
+        if (!window.googleTranslateReady) {
+            console.warn('Google Translate not ready yet');
+            return;
+        }
+
+        const googleSelect = document.querySelector('.goog-te-combo');
+        if (!googleSelect) {
+            console.warn('Google Translate selector not found');
+            return;
+        }
+
+        googleSelect.value = lang;
+        googleSelect.dispatchEvent(new Event('change'));
+    }
+
     // Initialize on DOM ready
     document.addEventListener('DOMContentLoaded', function() {
         // Create global detector instance
@@ -1087,14 +1176,17 @@
         
         // Check for saved language preference
         const savedLang = localStorage.getItem('selectedLanguage');
+        const initialLang = savedLang || document.documentElement.lang || 'en';
+
+        populateLanguageOptions(initialLang);
         if (savedLang) {
             window.languageDetector.applyTextDirection(savedLang);
         }
 
-        const languageSelect = document.getElementById('languageSelect');
-        if (languageSelect) {
-            languageSelect.value = savedLang || document.documentElement.lang || 'en';
-        }
+        const googleTranslateScript = document.createElement('script');
+        googleTranslateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        googleTranslateScript.async = true;
+        document.head.appendChild(googleTranslateScript);
         
         // Form submission handler
         const subscriptionForm = document.getElementById('subscriptionForm');
